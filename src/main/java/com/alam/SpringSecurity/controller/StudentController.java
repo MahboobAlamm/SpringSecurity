@@ -12,7 +12,7 @@ import com.alam.SpringSecurity.service.StudentService;
 
 
 @RestController
-@RequestMapping("student")
+@RequestMapping("/student")
 public class StudentController {
 
     private final StudentService studentService;
@@ -20,7 +20,7 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @PostMapping("/addStudnts")
+    @PostMapping("/addStudents")
     public void addStudents(@RequestBody List<Student> students) {
         studentService.addStudents(students);
     }
